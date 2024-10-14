@@ -5,6 +5,12 @@
 await import("./src/env.js");
 
 /** @type {import("next").NextConfig} */
-const config = {};
+const config = {
+    experimental: {
+        optimizeCss: false,  // CSS optimizasyonunu kapatıyoruz
+      },
+      reactStrictMode: true, // Geliştirme sırasında hata tespiti için
+      swcMinify: true,
+};
 
 export default config;

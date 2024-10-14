@@ -27,7 +27,8 @@
     "baseUrl": ".",
     "paths": {
       "@/*": ["./src/*"]
-    }
+    },
+    "types": ["node", "next"]
   },
   "include": [
     ".eslintrc.cjs",

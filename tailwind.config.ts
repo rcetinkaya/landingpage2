@@ -2,11 +2,15 @@ import { type Config } from "tailwindcss";
 import { fontFamily } from "tailwindcss/defaultTheme";
 
 export default {
-  content: ["./src/**/*.tsx"],
+  content: ["./src/**/*.{js,ts,jsx,tsx}", 
+  "./public/index.html"],
+  safelist: [
+    { pattern: /(s320|m360|l430|xl576|xxl786|xs992|sm1200|m1441|md1600|lg1920|xl2560)/ },
+  ],
   theme: {
     extend: {
       fontFamily: {
-        sans: ["Roboto","var(--font-geist-sans)", ...fontFamily.sans],
+        sans: ["var(--font-geist-sans)", ...fontFamily.sans],
       },
       backgroundImage: {
         'navbar-gradient': 'linear-gradient(90deg, #000000 0%, #1A0173 100%)',

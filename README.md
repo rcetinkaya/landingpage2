@@ -1,62 +1,29 @@
-# Landing Page
+# Create T3 App
 
-This project is a Next.js application built with the [T3 Stack](https://create.t3.gg/) using `create-t3-app`.
+This is a [T3 Stack](https://create.t3.gg/) project bootstrapped with `create-t3-app`.
 
-## Technologies Used
+## What's next? How do I make an app with this?
 
-- [Next.js](https://nextjs.org) - Version: ^14.2.4
+We try to keep this project as simple as possible, so you can start with just the scaffolding we set up for you, and add additional things later when they become necessary.
+
+If you are not familiar with the different technologies used in this project, please refer to the respective docs. If you still are in the wind, please join our [Discord](https://t3.gg/discord) and ask for help.
+
+- [Next.js](https://nextjs.org)
 - [NextAuth.js](https://next-auth.js.org)
-- [tRPC](https://trpc.io)
-- [React](https://reactjs.org) - Version: ^18.3.1
+- [Prisma](https://prisma.io)
+- [Drizzle](https://orm.drizzle.team)
 - [Tailwind CSS](https://tailwindcss.com)
-- [Geist UI](https://geist-ui.dev)
-- [Superjson](https://superjson.dev)
-- [Zod](https://zod.dev)
-
-## Project Setup
-
-Follow these steps to get the project running in development and production environments:
-
-1. **Install Dependencies**:
-   ```bash
-   npm install
-   ```
-
-2. **Run in Development Mode**:
-   ```bash
-   npm run dev
-   ```
-
-3. **Build for Production**:
-   ts-config.json "moduleResolution": "Bundler", please change 
-   ```bash
-   npm run build
-   ```
-
-4. **Start in Production Mode**:
-   ```bash
-   npm start
-   ```
-
-5. **Check Code Quality**:
-   ```bash
-   npm run lint
-   ```
+- [tRPC](https://trpc.io)
 
 ## Learn More
 
-To learn more about the [T3 Stack](https://create.t3.gg/), check out the following resources:
+To learn more about the [T3 Stack](https://create.t3.gg/), take a look at the following resources:
 
 - [Documentation](https://create.t3.gg/)
-- [Learning Resources for the T3 Stack](https://create.t3.gg/en/faq#what-learning-resources-are-currently-available) - Great tutorials
+- [Learn the T3 Stack](https://create.t3.gg/en/faq#what-learning-resources-are-currently-available) — Check out these awesome tutorials
 
-You can also visit the [create-t3-app GitHub repository](https://github.com/t3-oss/create-t3-app) - Your feedback and contributions are welcome!
+You can check out the [create-t3-app GitHub repository](https://github.com/t3-oss/create-t3-app) — your feedback and contributions are welcome!
 
-## Deployment
+## How do I deploy this?
 
-For information on deploying your project, refer to the following guides:
-
-- [Vercel Deployment Guide](https://create.t3.gg/en/deployment/vercel)
-- [Netlify Deployment Guide](https://create.t3.gg/en/deployment/netlify)
-- [Docker Deployment Guide](https://create.t3.gg/en/deployment/docker)
-
+Follow our deployment guides for [Vercel](https://create.t3.gg/en/deployment/vercel), [Netlify](https://create.t3.gg/en/deployment/netlify) and [Docker](https://create.t3.gg/en/deployment/docker) for more information.

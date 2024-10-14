@@ -24,6 +24,7 @@ export function Navbar() {
   const [anchorEl, setAnchorEl] = useState<{ [key: string]: HTMLElement | null }>({});
   const [isBackdropOpen, setBackdropOpen] = useState(false);
   const [drawerOpen, setDrawerOpen] = useState(false);
+  const [selectedSubMenu, setSelectedSubMenu] = useState<number>(-1);
 
   const sm = useMediaQuery('(max-width:1201px)');
   const xs = useMediaQuery('(max-width:993px)');
@@ -367,14 +368,13 @@ export function Navbar() {
                   <Typography> Connect Wallet</Typography>
                 </Button>
               </Box>
-              <Box sx={{ padding: 2, display: 'flex', flexDirection: 'column', height: '100%', gap: 2 }}>
+              <Box className="w-full" sx={{ padding: 2, display: 'flex', flexDirection: 'column', height: '100%', gap: 2 }}>
                 {
                   ['About', 'Awards', 'By Difo'].map((menu) => (
-                    <Box key={menu}>
-                      <Button
-                        className="flex justify-between normal-case"
+                    <Box className="w-full" key={menu}>
+                      <div
+                        className="flex justify-between normal-case w-full cursor-pointer"
                         key={menu}
-                        fullWidth
                         color="inherit"
                         onClick={() => toggleMenu(menu)}
                       >
@@ -395,35 +395,35 @@ export function Navbar() {
                               : "rotate(0deg)",
                           }}
                         />
-                      </Button>
+                      </div>
 
                       {openMenu === menu && (
-                        <Box sx={{ pl: 2, pb: 1 }}>
+                        <Box className="gap-4 mt-4 flex flex-col" sx={{ pl: 2, pb: 1 }}>
                           {
                             subMenuItems.map((item, key) => {
-                              return <Button
-                                className="flex justify-between normal-case"
+                              return <div
+                                className="flex justify-between normal-case cursor-pointer w-full"
                                 key={key}
-                                fullWidth
                                 color="inherit"
+                                onClick={() =>setSelectedSubMenu(key)}
                               >
                                 <Typography
                                   className=" text-sm lg:text-base flex gap-x-2"
                                   sx={{ transition: "transform 0.3s ease" }}
-                                  color={/* openMenu === menu ? "#FFCA3A" : */ "#A4ACB9"}
+                                  color={selectedSubMenu === key ? "white" : "#A4ACB9"}
                                 >
                                   {item}
                                 </Typography>
                                 <KeyboardArrowRightIcon
                                   sx={{
-                                    color: /* openMenu === menu ? "#FFCA3A" : */ "#A4ACB9",
+                                    color: /* openMenu === menu ? "#FFCA3A" : */selectedSubMenu === key ? "white" : "#A4ACB9",
                                     /*  transition: "transform 0.3s ease",
                                      transform: openMenu === menu
                                        ? "rotate(-180deg)"
                                        : "rotate(0deg)", */
                                   }}
                                 />
-                              </Button>
+                              </div>
                             })
                           }
 

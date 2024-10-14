@@ -1,18 +1,14 @@
-import { CoinCards } from "@/components/coinCards";
-import Divider from "@/components/divider";
-import DividerReverse from "@/components/dividerReverse";
-import { BestOfTheBest } from "@/components/homePage/bestOfTheBest";
-import { Collectible } from "@/components/homePage/sectionOne";
-import { WhyJoin } from "@/components/homePage/whyJoin";
-import {  HydrateClient } from "@/trpc/server";
+import { BestOfTheBest } from "./components/bestOfTheBest";
+import { CoinCards } from "./components/coinCards";
+import Divider from "./components/divider";
+import DividerReverse from "./components/dividerReverse";
+import { Collectible } from "./components/sectionOne";
+import { WhyJoin } from "./components/whyJoin";
 
-export default async function Home() {
-
-
-  return ( 
-    <HydrateClient>
-      <main className="flex w-full min-h-screen flex-col items-center justify-center bg-black ">
-        <div className="mb-[3%]">
+export default function HomePage() {
+  return (
+    <main className="flex w-full min-h-screen flex-col items-center justify-center bg-black">
+      <div className="mb-[3%]">
           <Collectible />
           <div className="my-[3%] ">
             <CoinCards />
@@ -25,10 +21,7 @@ export default async function Home() {
             <WhyJoin />
             </div>
           </div>
-          {/* <LoveUs />
-          <Collection /> */}
         </div>
-      </main>
-    </HydrateClient>
+    </main>
   );
 }
