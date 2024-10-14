@@ -1,16 +1,15 @@
 "use client";
 import React, { useEffect, useState } from 'react';
 import ArrowOutwardIcon from '@mui/icons-material/ArrowOutward';
-
+import {useMediaQuery} from "@mui/material";
 // İki günlük süreyi milisaniye cinsinden tanımlıyoruz
 const TWO_DAYS_IN_MS = 2 * 24 * 60 * 60 * 1000;
 
 export function WhyJoin() {
     // İlk render'da sabit bir hedef zaman belirlenir
     const targetTime = React.useRef(new Date().getTime() + TWO_DAYS_IN_MS);
-
+    const xxs834 = useMediaQuery('(max-width:834px)');
     const [timeLeft, setTimeLeft] = useState(calculateTimeLeft(targetTime.current));
-
     useEffect(() => {
         const timer = setInterval(() => {
             setTimeLeft(calculateTimeLeft(targetTime.current));
@@ -205,7 +204,7 @@ export function WhyJoin() {
                             >
                                 <p className='text-[10px] font-bold l430:text-sm xxs834:text-xl sm1200:text-2xl m1441:text-[32px] text-[#DD1C1A]'>ATTENTION!</p>
                                 <p className='text-[10px] font-bold hidden xxs834:inline sm1200:text-xl m1441:text-2xl text-white'>Information to consider about $DIFO token</p>
-                                <ArrowOutwardIcon className='text-[14px] mt-[-4px] l430:mt-0 xxs834:hidden' sx={{ color: "white" }} />
+                                    <ArrowOutwardIcon className='text-[14px] mt-[-4px] l430:mt-0 xxs834:hidden!' sx={{ color: "white",display:xxs834 ?"block":"none" }} />
                             </div>
                         </div>
                     </div>
@@ -230,7 +229,7 @@ export function WhyJoin() {
     );
 }
 
-function TimeBox({ label, value }:{label:string,value:number}) {
+function TimeBox({ label, value }: { label: string, value: number }) {
     return (
         <div className="flex flex-col justify-center items-center gap-2 sm1200:gap-6 my-4">
             <h4 className="text-xs font-bold l430:text-sm xxl786:text-xl xxs834:text-2xl sm1200:text-[40px] text-[#4480F5]">
