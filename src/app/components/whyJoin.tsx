@@ -198,7 +198,7 @@ export function WhyJoin() {
                 <div className="flex justify-around gap-2">
                     <div className='w-full flex justify-center items-center'>
                         <div
-                            className="xl576:min-w-[247px] xxs834:min-w-[390px] sm1200:min-w-[580px] m1441:min-w-[730px] relative rounded-[10px] w-full min-w-[164px] p-1 bg-gradient-to-r from-transparent via-[#86FFFD] to-transparent"
+                            className="xl576:min-w-[247px] xxs834:min-w-[390px] sm1200:min-w-[580px] m1441:min-w-[745px] relative rounded-[10px] w-full min-w-[164px] p-1 bg-gradient-to-r from-transparent via-[#86FFFD] to-transparent"
                         >
                             <div
                                 className="h-full w-full rounded-[8px] bg-black p-4 flex justify-center items-center gap-2 cursor-pointer"
