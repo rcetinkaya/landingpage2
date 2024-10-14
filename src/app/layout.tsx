@@ -5,7 +5,7 @@ import { type Metadata } from "next";
 
 import { TRPCReactProvider } from "@/trpc/react";
 import {Navbar} from "@/components/navbar";
-import { Footer } from "@/components/footer";
+
 
 
 export const metadata: Metadata = {
@@ -22,7 +22,6 @@ export default function RootLayout({
       <body>
         <Navbar/>
         <TRPCReactProvider>{children}</TRPCReactProvider>
-        {/* <Footer /> */}
       </body>
     </html>
   );

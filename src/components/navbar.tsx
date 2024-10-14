@@ -20,6 +20,7 @@ import PersonIcon from '@mui/icons-material/Person';
 import CloseIcon from '@mui/icons-material/Close';
 
 export function Navbar() {
+  // eslint-disable-next-line
   const [anchorEl, setAnchorEl] = useState<{ [key: string]: HTMLElement | null }>({});
   const [isBackdropOpen, setBackdropOpen] = useState(false);
   const [drawerOpen, setDrawerOpen] = useState(false);
@@ -60,8 +61,9 @@ export function Navbar() {
     "Referance Program", "Video Contest", "Graphic Contest", "Content Contest", "Airdrop"
   ]
   const [openMenu, setOpenMenu] = useState(null);
-
+  // eslint-disable-next-line
   const toggleMenu = (menuName: any) => {
+  // eslint-disable-next-line
     setOpenMenu(openMenu === menuName ? null : menuName);
   };
 
