@@ -33,7 +33,6 @@ export function Navbar() {
   const l = useMediaQuery('(max-width:430px)');
   const m = useMediaQuery('(max-width:360px)');
   const s = useMediaQuery('(max-width:320px)');
-  console.log({ xxl, xl, l, m, s });
   const handleMenuOpen = (event: MouseEvent<HTMLElement>, menuKey: string) => {
     /*   setTimeout(() => {
       }, 500);  */
